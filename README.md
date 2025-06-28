@@ -47,15 +47,4 @@ LoomLoop is a **personal sustainability initiative** exploring how discarded tex
 
 ---
 
-💡 *An experimental approach to sustainable fashion systems*  
-
---- 
-
-**#SustainableFashion #Upcycling #TextileWaste #EthicalDesign #FashionInnovation**  
-
----
-🧶 *Exploring the loop between waste and wearable art.*  
-
----
-
 *Note: LoomLoop is a personal project, not a commercial entity. All concepts are in research/development stage.*  
