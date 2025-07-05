@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+const API_BASE = import.meta.env.VITE_API_BASE_URL; 
 
 const AuthContext = createContext();
 
@@ -11,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/auth/me', {
+        const res = await axios.get(`${API_BASE}/api/auth/me`, {
           withCredentials: true
         });
         setUser(res.data.user);
@@ -29,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        `${API_BASE}/api/auth/login`,
         { email, password },
         { withCredentials: true }
       );
@@ -44,7 +45,7 @@ export const AuthProvider = ({ children }) => {
   const signup = async (username, email, password) => {
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/auth/signup',
+        `${API_BASE}/api/auth/signup`,
         { username, email, password },
         { withCredentials: true }
       );
@@ -59,7 +60,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       await axios.post(
-        'http://localhost:5000/api/auth/logout',
+        `${API_BASE}/api/auth/logout`,
         {},
         { withCredentials: true }
       );
